@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Builder</title>
+    <style>
+        /* Add your CSS styles here */
+        /* Overall styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.design-mode {
+    display: flex;
+    padding: 20px;
+}
+
+
+.toolbar {
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.content-area {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    min-height: 400px;
+    border: 1px solid #ccc;
+}
+
+/* Draggable elements */
+.draggable-element {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #3e6bb7;
+    color: #fff;
+    text-align: center;
+    cursor: grab;
+}
+
+/* Settings modal */
+.settings-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.settings-modal h2 {
+    margin: 0 0 10px;
+}
+
+.settings-modal label {
+    display: block;
+    margin-top: 10px;
+}
+
+.settings-modal input,
+.settings-modal select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid # #000000;
+    border-radius: 3px;
+}
+
+.settings-modal button {
+    display: block;
+    margin-top: 10px;
+    background-color: #3e6bb7;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid # #000000;
+    cursor: pointer;
+}
+
+/* Show settings modal on hover */
+.design-mode .draggable-element:hover .settings-modal {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <div class="design-mode">
+
+        <div class="toolbar">
+            <!-- Add draggable UI elements here -->
+            <div class="draggable-element" draggable="true">Layout</div>
+            <div class="draggable-element" draggable="true">Label</div>
+            <div class="draggable-element" draggable="true">Button</div>
+            <div class="draggable-element" draggable="true">Check Box</div>
+            <div class="draggable-element" draggable="true">Radio Button</div>
+            <div class="draggable-element" draggable="true">Table</div>
+             <div class="draggable-element" draggable="true">Navigation</div>
+              <div class="draggable-element" draggable="true">Image</div>
+               <div class="draggable-element" draggable="true">end</div>
+
+        </div>
+        <div class="content-area">
+            <!-- Elements will be dropped here -->
+        </div>
+    </div>
+
+    <!-- Settings Modal for Label Element -->
+    <div class="settings-modal" style="display: none;">
+        <h2>Label Settings</h2>
+        <label for="element-name">Element Name:</label>
+        <input type="text" id="element-name">
+        <label for="font-size">Font Size:</label>
+        <input type="text" id="font-size">
+        <label for="font-style">Font Style:</label>
+        <select id="font-style">
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+            <option value="italic">Italic</option>
+        </select>
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color">
+        <button id="save-settings">Save</button>
+    </div>''
+
+    <script>
+        // Add your JavaScript for drag and drop functionality, modal behavior, and more here
+    </script>
+</body>
+</html>
